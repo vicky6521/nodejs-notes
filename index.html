@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js筆記</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="tab">
+        <button class="tablinks active p-1">npm</button>
+    </div>
+    <article class="p-2 tabcontent d-block">
+        <h2 class="py-2">npm is the standard package manager for Node.js</h2>
+        <div class="underline pt-2 pb-1">Installing all dependencies</div>
+        <div class="py-1">If a project has a package.json file, by running</div>
+        <div class="row br-1">
+            <code>npm install</code>
+        </div>
+        <div class="py-1">it will install everything the project needs, in the node_modules folder, creating it if it's not existing already.</div>
+        <div class="underline pt-2 pb-1">Installing a single package</div>
+        <div class="py-1">You can also install a specific package by running</div>
+        <div class="row br-1">
+            <code>npm install &lt;package-name&gt;</code>
+        </div>
+        <div class="py-1">Furthermore, since npm 5, this command adds &lt;package-name&gt; to the package.json file dependencies. Before version 5, you needed to add the flag --save.</div>
+        <div class="underline pt-2 pb-1">Often you'll see more flags added to this command:</div>
+        <ul>
+            <li class="py-1"><code class="d-inline-block py-1 px-1 bg-skyblue br-1">--save-dev</code> installs and adds the entry to the package.json file <em>devDependencies</em></li>
+            <li class="py-1"><code class="d-inline-block py-1 px-1 bg-skyblue br-1">--no-save</code> installs but does not add the entry to the package.json file <em>dependencies</em></li>
+            <li class="py-1"><code class="d-inline-block py-1 px-1 bg-skyblue br-1">--save-optional</code> installs and adds the entry to the package.json file <em>optionalDependencies</em></li>
+            <li class="py-1"><code class="d-inline-block py-1 px-1 bg-skyblue br-1">--no-optional</code> will prevent optional dependencies from being installed</li>
+        </ul>
+        <div class="underline pt-2 pb-1">Shorthands of the flags can also be used:</div>
+        <ul>
+            <li class="py-1">
+                -S: --save
+            </li>
+            <li class="py-1">
+                -D: --save-dev
+            </li>
+            <li class="py-1">
+                -O: --save-optional
+            </li>
+        </ul>
+        <div class="underline pt-2 pb-1">Running Tasks</div>
+        <div class="py-1">The package.json file supports a format for specifying command line tasks that can be run by using</div>
+        <div class="row br-1">
+            <code>npm run &lt;task-name&gt;</code>
+        </div>
+        <div class="py-3">
+            <span>Reference :</span>
+            <div>
+                <a class="darkblue" href="https://nodejs.dev/learn/an-introduction-to-the-npm-package-manager" target="_blank">
+                    <cite>An introduction to the npm package manager</cite>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
